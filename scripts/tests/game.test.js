@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const {game,newGame,showScore}=require("../game");
+const {game,newGame,showScore,addTurn}=require("../game");
 
 beforeAll(()=>{
     let fs=require("fs");
@@ -16,9 +16,11 @@ describe("game object contains correct keys",()=>{
     test("score key exist",()=>{
         expect("score" in game).toBe(true);
     });
+    
     test("currentGame key exist",()=>{
         expect("currentGame" in game).toBe(true);
     });
+    
     test("playerMoves key exist",()=>{
         expect("playerMoves" in game).toBe(true);
     });
@@ -59,9 +61,15 @@ describe("newGame works correctly",()=>{
     test("should clean player moves",()=>{
         expect(game.playerMoves).toEqual([])
     });
+    /*
     test("should clean current choices",()=>{
         expect(game.currentGame.length).toBe(0);
-    });
+    });*/
+    
+    test("Should be one move in the computer's game array",()=>{
+        expect(game.currentGame.length).toBe(1);
+    });    
+
     test("should display 0 for the element with id of score",()=>{
         expect(document.getElementById("score").innerText).toEqual(0);
     })
