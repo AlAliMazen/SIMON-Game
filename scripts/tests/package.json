@@ -1,0 +1,17 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "main": "game.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Mazen Al Ali",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

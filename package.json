@@ -1,0 +1,14 @@
+{
+  "name": "simon-game",
+  "version": "1.0.0",
+  "description": "used to try JEST frame work and UNIT testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mazen Al Ali",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
